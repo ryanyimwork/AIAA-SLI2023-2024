@@ -130,8 +130,7 @@ public class DataManeger : MonoBehaviour
         UIManeger UIM = UIManeger.Instance;
         DataManeger DM = Instance;
 
-        newRot =  new Quaternion(Mathf.Sin(Mathf.PI/4), 0, 0, Mathf.Cos(Mathf.PI/4)) * newRot;
-        newRot.z = -newRot.z;
+        newRot = new Quaternion(-newRot.w, -newRot.x, -newRot.y, newRot.z);
 
         Rocket.instance.TargetRot = newRot;
 
